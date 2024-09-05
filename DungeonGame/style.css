@@ -1,0 +1,164 @@
+@font-face {
+    font-family: 'Pixel';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PixelatedFont'), url('font/MinecraftRegular-Bmg3.otf') format('woff2'), url('/fonts/PixelatedFont.woff') format('woff');
+  }
+
+.redContainer {
+    position: relative;
+    display: inline-block
+}
+
+.smallerRedContainer {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+}
+
+.playerHpBar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+
+}
+
+.playerHealthBar {
+    position: absolute;
+    background: #a3ef6c;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.playerHealthBarBackground {
+    background-color: rgb(213, 17, 17);
+    height: 30px;
+    width: 100%
+}
+
+#timer {
+
+    background-color: rgb(56, 57, 72);
+    width: 100px;
+    height: 50px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 4px solid white;
+
+}
+
+
+
+.enemyHpBar {
+    position: relative;
+    width: 100%;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    border-right: 4px solid white;
+}
+
+.enemyHealthBar {
+    position: absolute;
+    background: #921fdf;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.enemyHealthBarBackground {
+    background-color: rgb(213, 17, 17);
+    height: 30px
+}
+
+.alertBox {
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    opacity: 0;
+    width: 824px;
+    height: 457px;
+    background-image: url('img/HUD\ Menus\ Contrast\ Blue\ 2.png');
+    background-size: contain; /* This will make sure the image covers the entire alert box */
+    background-position: center; /* This will center the image */
+    border-radius: 20px;
+    transition: opacity .5s ease-in-out;
+    z-index: 10;
+    background-repeat: no-repeat;
+  }
+h3{
+    color: #ffffff;
+    font-size: larger;
+    font-family: 'pixel';
+}
+.alertBox p:first-of-type{
+    font-weight: 900;
+    vertical-align: middle;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Pixel';
+    max-width: 60%;
+    color: #ffffff;
+}
+
+.alertBox.visible {
+    opacity: 1;
+}
+.alertBox p:nth-of-type(2){
+    padding-top: 40px;
+    font-weight: 900;
+    font-size: 20px;
+    vertical-align: middle;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'pixel';
+    max-width: 60%;
+    color: #f1f1f1;
+}
+.nextLvlBtn {
+    background-color: #1e1c60;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 250px;
+    height: 70px;
+    margin-top: 50px;
+    border-color: #ffffff;
+    border-width: 5px;
+    border-style: solid;
+    color: #ffffff;
+    font-family: 'Pixel';
+    font-size: 20px;
+    transition: background-color, border-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nextLvlBtn:hover {
+    cursor: grab;
+    background-color: #100063;
+    color: #184eee;
+    border-color: #184eee;
+   
+  }
+
+
+

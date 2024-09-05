@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: rgb(36, 41, 51)
+    }
+  </style>
+
+</head>
+
+<body>
+   <!-- red container div -->
+  <div class="redContainer">
+    <div class="alertBox">
+    <h3>Congratulations!</h3>
+    <p>You have defeated the first boss.</p>
+    <p>This achievement unlocks the dash attack that 
+      can be activated with the 'Z' key.</p> <br> <button class="nextLvlBtn">
+        Proceed to the Next Level</button>
+  </div>
+
+    <!-- smaller red container div -->
+    <div class="smallerRedContainer">
+
+      <!-- player health -->
+      <div class="playerHpBar">
+
+        <div class="playerHealthBarBackground"></div>
+        <div class="playerHealthBar" id="playerHealth">
+
+        </div>
+      </div>
+
+      <!-- timer -->
+      <div id="timer">
+        10
+      </div>
+      <!-- enemy health -->
+      <div class="enemyHpBar">
+
+        <div class="enemyHealthBarBackground"></div>
+
+        <div class="enemyHealthBar" id="enemyHealth"></div>
+
+      </div>
+
+    </div>
+
+    <canvas></canvas>
+
+  </div>
+
+  <script src="loadImages.js"></script>
+
+  <script src="spriteClass.js"></script>
+
+  <script src="enemy.js"></script>
+
+  <script src="player.js"></script>
+
+  <script src="index.js"></script>
+
+
+
+</body>
+
+</html>

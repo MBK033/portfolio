@@ -1,0 +1,288 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar{
+    display: none;
+}
+
+
+body {
+  overflow: none;
+  overflow-x: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  max-width: 100vw;
+
+    background-color: #fff;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+}
+
+:root {
+  
+  --bar-width: 60px;
+  --bar-height: 8px;
+  --hamburger-gap: 6px;
+  --foreground: #481D24;
+  --background: #2b2624;
+  --hamburger-margin: 8px;
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-menu {
+  
+  margin-top: 10px;
+
+  padding-right: 10px !important;
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  position: absolute;
+  top: var(--hamburger-margin);
+  right: var(--hamburger-margin);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hamburger-menu:has(input:checked) {
+  --foreground:#000000;
+  --background: #481D24;
+
+  /* background-color:; */
+  /* border */
+  /* box-shadow */
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+  background-color: var(--background);
+
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  
+  border-radius: 9999px;
+  transform-origin: right center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburger-menu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.sidebar {
+ 
+  background-color:#bfafa6;
+  color: #2b2624;
+  transition: left var(--animation-timing);
+  padding: 0.5rem 1rem;
+  padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+  width: 110vw;
+  min-height: 100vh;
+  left: 110vw;
+  position: absolute;
+  top: 0;
+}
+.li{
+  font-size: larger;
+  display: none;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+  left: calc(100vw - 13rem);
+
+  
+
+}
+  /* Define the initial position of the element */
+  .slide-in-element {
+ /* border: 2px solid #D4AE31; */
+    font-size: 50px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    animation: slideIn 4s 1;
+    z-index:0;
+position: relative;
+align-items: row;
+}
+
+/* Define the keyframes for the slide-in animation */
+@keyframes slideIn {
+  from {
+    margin-top: -40vh;
+  }
+    to {
+        margin-top: 23vh/* Slide the element to the left edge of the screen */
+    }
+}
+
+.mymove {
+ font-weight: bold;
+  font-size: 25px;
+  height: 0vh;
+  display: in;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  text-align: center;
+ 
+
+  position: relative;
+  animation: mymove 4s 1;
+  top: 60vh;
+}
+
+@keyframes mymove {
+  from {top: 100vh;}
+  to {top:60vh;}
+}
+
+.text{
+  color:#1C2321;
+}
+
+.sidebar nav ul a {
+ text-decoration: none;
+font-size: large;
+font-weight: 900;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 30px;
+  font-size: 20px;
+  color: #481D24;
+  padding-left: 0px;
+  padding-top: 10px;
+  transition: 0.4s;
+  z-index: 999999999;
+}
+ul li:hover a {
+  padding-left: 25px;
+}
+.sidebar ul a i {
+  margin-right: 0px;
+}
+body {
+  background-color: #f5e4d7;
+}
+svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+h1 {
+  font-weight: bold;
+   font-size: 45px;
+   height: 0vh;
+   display: in;
+   align-items: center;
+   justify-content: center;
+   margin-top: 160px;
+   text-align: center;
+  
+ 
+   position: relative;
+}
+@media (min-width: 768px) {
+  .hamburger-menu {
+    align-items: center !important; /* Add the !important rule to enforce the property */
+  }
+  .sidebar {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    width: 300px !important;
+    /* min-width: 100% !important; Add the !important rule to enforce the property */
+  }
+ 
+}
+/* @media (max-width: 768px) {
+   .hamburger-menu:has(input:checked) + .sidebar {
+    left: calc(0vw);
+  
+  }
+} */
+
+.sidebar {
+  z-index: 99; /* Set the z-index for the sidebar */
+  /* Other CSS properties */
+}
+
+.hamburger-menu {
+  z-index: 99999; /* Set the z-index for the hamburger menu button */
+  /* Other CSS properties */
+}
+
+/* Ensure the hamburger menu button remains visible even when the sidebar is open */
+.hamburger-menu:has(input:checked) + .sidebar {
+  z-index: 9999; /* Set the z-index for the open sidebar */
+  /* Other CSS properties */
+}
+
+.portfolio-new{
+  position: fixed;
+  z-index: 100;
+  padding: 15px;
+  background-color: #2b2624;
+  color: #f5e4d7;
+  font-family: sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  top: 20px;
+  left: 20px;
+  border-radius: 999px;
+  transition: background-color 0.3s, color 0.3s;
+}
+a{
+  text-decoration: none;
+}
+
+.portfolio-new:hover{
+  background-color: #bfafa6;
+  color: #2b2624;
+}
