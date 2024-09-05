@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="style.css" />
   <style>
     div {
       font-family: 'Courier New', Courier, monospace;
@@ -151,7 +151,6 @@
       d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z" />
 
   </svg>
-  <button><a href="img\Schermafbeelding 2024-05-31 233703.png" target="_blank" class="portfolio-new">nieuwe portfolio design</a></button>
 
 
 
@@ -165,12 +164,11 @@
     <nav>
       <ul>
         <li><a href="../index.html">Home</a></li>
-        <li><a href="projecten.html">Projecten</a></li>
-        <li><a href="overmij.html">over mij</a></li>
-        <li><a href="contact.html">contact</a></li>
-        <li><a href="Screenshot 2023-11-09 013157.png" target="_blank"><img
-              src="output-onlinetools-removebg-preview.png" alt="CV" width="35px" height="45px"></a></li>
-
+        <li><a href="../assets/projecten.html">Projecten</a></li>
+        <li><a href="../assets/overmij.html">over mij</a></li>
+        <li><a href="../assets/contact.html">contact</a></li>
+        <li><a href="../assets/CV_Burak_Kaya.pdf" target="_blank"><img src="img/output-onlinetools-removebg-preview.png" alt="CV" width="35px" height="45px"></a></li>
+        
       </ul>
 
     </nav>
@@ -181,15 +179,19 @@
     <div>Header</div>
     <div class="slide-down">mijn projecten</div>
     <div class="projects-container">
-      <div class="project" onclick="gotoUrl('portfolio/index.html');">
+      <div class="project" onclick="gotoUrl('../portfolio/index.html');">
         <h2>Portfolio</h2>
         <p>Dit is de eerste portfolio website die ik heb gemaakt.</p>
       </div>
-      <div class="project" onclick="gotoUrl('../gastenboek v2/gastenboek/index.php');">
-        <h2>Gastenboek</h2>
-        <p>Mijn gastenboek is een website waarin je berichten kunt achterlaten en afbeeldingen</p>
-      </div>
-      <div class="project" onclick="gotoUrl('../DungeonGame/index.html');">
+      <div class="project">
+        <a href="https://github.com/MBK033/gastenboek">
+            <h2>Gastenboek</h2>
+        </a>
+        <p>Mijn gastenboek is een website waarin je berichten kunt achterlaten en afbeeldingen.</p>
+    </div>
+    
+      
+      <div class="project" onclick="gotoUrl('../DungeonGame/game-gemaakt-met-javascript/index.html');">
         <h2>JavaScript Game</h2>
         <p>Ik moest een spel in JavaScript maken dit was een uitdaging
           voor mij om het te doen met alleen HTML/CSS/Javascript.</p>
@@ -199,7 +201,7 @@
         <p>yard is een solicitatie website die we moesten maken in de stijl van een andere website
         </p>
       </div>
-      <div class="project" onclick="gotoUrl('../ergowijzer/l3-pro-3-ergowijzer-dumble/index.html');">
+      <div class="project" onclick="gotoUrl('../Ergowijzer/l3-pro-3-ergowijzer-dumble/index.html');">
         <h2>Ergowijzer</h2>
         <p>Ergowijzer is een website over gezondheid waarop ik had gewerkt met een team van 7.</p>
       </div>
